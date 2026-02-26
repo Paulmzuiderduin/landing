@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Paul Zuiderduin | Sport-Tech Apps</title>
     <meta
       name="description"
@@ -11,6 +12,15 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://paulzuiderduin.com/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Paul Zuiderduin | Sport-Tech Apps" />
+    <meta property="og:description" content="Personal website of Paul Zuiderduin with practical sport-tech apps and projects." />
+    <meta property="og:url" content="https://paulzuiderduin.com/" />
+    <meta property="og:image" content="https://paulzuiderduin.com/personal-logo.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Paul Zuiderduin | Sport-Tech Apps" />
+    <meta name="twitter:description" content="Personal website of Paul Zuiderduin with practical sport-tech apps and projects." />
+    <meta name="twitter:image" content="https://paulzuiderduin.com/personal-logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,11 +94,11 @@
         width: 42px;
         height: 42px;
         border-radius: 12px;
-        display: grid;
-        place-items: center;
-        color: #fff;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+        display: block;
+        object-fit: contain;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        padding: 2px;
       }
 
       .small {
@@ -182,11 +192,30 @@
         background: rgba(255, 255, 255, 0.86);
       }
 
-      .card p {
+       .card p {
         margin: 8px 0 0;
         color: var(--muted);
         line-height: 1.55;
         font-size: 0.93rem;
+      }
+
+      .profile-card {
+        padding: 12px;
+        overflow: hidden;
+      }
+
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+      }
+
+      .profile-caption {
+        margin: 10px 4px 2px;
+        font-size: 0.84rem;
+        color: var(--muted);
       }
 
       .apps {
@@ -360,7 +389,7 @@
     <div class="wrap">
       <header class="panel header">
         <div class="identity">
-          <div class="badge">PZ</div>
+          <img class="badge" src="/personal-logo.svg" alt="Paul Zuiderduin" />
           <div>
             <div style="font-weight: 800;">Paul Zuiderduin</div>
             <div class="small">Sports, education, and practical app building</div>
@@ -392,6 +421,10 @@
         </div>
 
         <div class="stack">
+          <div class="card profile-card">
+            <img class="profile-photo" src="/profile-photo.jpg" alt="Paul Zuiderduin" />
+            <p class="profile-caption">Builder, coach, and PE teacher in training.</p>
+          </div>
           <div class="card">
             <h3>What I build</h3>
             <p>Tools for coaches and teams that make tracking, analysis, and decisions faster and clearer.</p>

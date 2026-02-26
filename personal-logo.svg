@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Paul Zuiderduin logo">
+  <defs>
+    <linearGradient id="pz-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#112a44"/>
+      <stop offset="100%" stop-color="#1d77d2"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#pz-bg)"/>
+  <path d="M58 56h140" stroke="#ffffff" stroke-opacity=".22" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="128" cy="128" r="72" fill="none" stroke="#f3f9ff" stroke-width="14"/>
+
+  <path d="M78 70V184M78 70H136C161 70 180 89 180 114C180 139 161 158 136 158H78" fill="none" stroke="#0d2a45" stroke-opacity=".4" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 70V184M78 70H136C161 70 180 89 180 114C180 139 161 158 136 158H78" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M96 92H186L102 186H190" fill="none" stroke="#0d2a45" stroke-opacity=".4" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M96 92H186L102 186H190" fill="none" stroke="#ccfccb" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
