@@ -266,6 +266,32 @@
         font-weight: 700;
       }
 
+      .support-card {
+        background: linear-gradient(135deg, rgba(14, 78, 166, 0.98), rgba(27, 123, 223, 0.94));
+        color: #ffffff;
+        border-color: rgba(14, 78, 166, 0.22);
+      }
+
+      .support-card p {
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .kofi-embed {
+        margin-top: 14px;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .kofi-embed iframe {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 4px;
+        background: #f9f9f9;
+      }
+
       footer {
         display: flex;
         flex-wrap: wrap;
@@ -453,10 +479,21 @@
           </div>
           <div class="card">
             <h3>Contact</h3>
-            <p>If you have feedback, ideas, or want to collaborate, send me a message or support the work.</p>
+            <p>If you have feedback, ideas, or want to collaborate, send me a message.</p>
             <div class="inline-links">
               <a href="mailto:info@paulzuiderduin.com">info@paulzuiderduin.com</a>
-              <a href="https://ko-fi.com/paulzuiderduin" target="_blank" rel="noreferrer">Support on Ko-fi</a>
+            </div>
+          </div>
+          <div class="card support-card">
+            <h3>Support This Work</h3>
+            <p>If these apps are useful to you, you can support further development through Ko-fi.</p>
+            <div class="kofi-embed">
+              <iframe
+                id="kofiframe"
+                src="https://ko-fi.com/paulzuiderduin/?hidefeed=true&widget=true&embed=true&preview=true"
+                height="712"
+                title="paulzuiderduin"
+              ></iframe>
             </div>
           </div>
         </div>
