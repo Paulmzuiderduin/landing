@@ -253,6 +253,19 @@
         font-weight: 700;
       }
 
+      .inline-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .inline-links a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
       footer {
         display: flex;
         flex-wrap: wrap;
@@ -440,8 +453,11 @@
           </div>
           <div class="card">
             <h3>Contact</h3>
-            <p>If you have feedback, ideas, or want to collaborate, send me a message.</p>
-            <a href="mailto:info@paulzuiderduin.com">info@paulzuiderduin.com</a>
+            <p>If you have feedback, ideas, or want to collaborate, send me a message or support the work.</p>
+            <div class="inline-links">
+              <a href="mailto:info@paulzuiderduin.com">info@paulzuiderduin.com</a>
+              <a href="https://ko-fi.com/paulzuiderduin" target="_blank" rel="noreferrer">Support on Ko-fi</a>
+            </div>
           </div>
         </div>
       </section>
