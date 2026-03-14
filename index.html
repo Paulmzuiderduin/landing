@@ -435,6 +435,7 @@
         function removeBanner() {
           var banner = document.getElementById('consent-banner');
           if (banner) banner.remove();
+          document.body.style.overflow = '';
         }
 
         function createBanner() {
@@ -449,12 +450,16 @@
             'align-items:center',
             'justify-content:center',
             'padding:24px',
-            'background:rgba(15,23,42,0.42)'
+            'background:rgba(15,23,42,0.42)',
+            'backdrop-filter:blur(8px)'
           ].join(';');
 
           var banner = document.createElement('div');
           banner.setAttribute('role', 'dialog');
+          banner.setAttribute('aria-modal', 'true');
           banner.setAttribute('aria-live', 'polite');
+          banner.setAttribute('aria-labelledby', 'consent-banner-heading');
+          banner.setAttribute('aria-describedby', 'consent-banner-copy');
           banner.style.cssText = [
             'width:min(100%,540px)',
             'padding:22px',
@@ -469,25 +474,27 @@
           ].join(';');
 
           var heading = document.createElement('div');
+          heading.id = 'consent-banner-heading';
           heading.style.cssText = 'font:800 18px/1.2 Manrope, Arial, sans-serif;color:#0f172a;';
-          heading.textContent = 'Analytics preferences';
+          heading.textContent = 'Help improve this site';
 
           var text = document.createElement('div');
+          text.id = 'consent-banner-copy';
           text.textContent =
-            'Allow privacy-friendly analytics so I can understand visits and improve the website. Google Analytics 4 only loads after you accept.';
+            'Allow optional Google Analytics 4 so I can understand visits and improve the website. Basic privacy-friendly traffic measurement with Umami runs separately.';
 
           var note = document.createElement('div');
           note.style.cssText =
             'font:500 12px/1.5 Manrope, Arial, sans-serif;color:#475569;background:#f8fafc;border:1px solid rgba(148,163,184,0.24);border-radius:12px;padding:10px 12px;';
           note.textContent =
-            'You can keep using the site if you reject. You can also change this later via Analytics preferences.';
+            'Google Analytics 4 stays off until you accept. Umami is used for basic privacy-friendly visitor counts. You can keep using the site if you reject and change this later via Analytics preferences.';
 
           var actions = document.createElement('div');
           actions.style.cssText = 'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;';
 
           var reject = document.createElement('button');
           reject.type = 'button';
-          reject.textContent = 'Reject';
+          reject.textContent = 'Reject analytics';
           reject.style.cssText = 'border:1px solid rgba(15,23,42,0.18);background:#fff;color:#0f172a;border-radius:999px;padding:12px 14px;font:700 13px Manrope, Arial,sans-serif;cursor:pointer;';
           reject.onclick = function () {
             saveConsent('denied');
@@ -496,7 +503,7 @@
 
           var accept = document.createElement('button');
           accept.type = 'button';
-          accept.textContent = 'Accept';
+          accept.textContent = 'Accept analytics';
           accept.style.cssText = 'border:1px solid transparent;background:#0f4ea6;color:#fff;border-radius:999px;padding:12px 14px;font:700 13px Manrope, Arial,sans-serif;cursor:pointer;';
           accept.onclick = function () {
             saveConsent('granted');
@@ -512,6 +519,7 @@
           banner.appendChild(actions);
           overlay.appendChild(banner);
           document.body.appendChild(overlay);
+          document.body.style.overflow = 'hidden';
         }
 
         function ensurePreferencesButton() {
@@ -550,6 +558,11 @@
       })();
     </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="7da38100-4be9-4a6b-9cea-0f1a5e1e2236"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7681341861907201"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="wrap">
